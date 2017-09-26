@@ -1,18 +1,20 @@
-// Fatorial - Dado um inteiro N, determine quanto vale N fatorial (escreve-se N!). 
-// O fatorial de um número é o produto de todos os números entre 1 e N, inclusive. Por exemplo, 5! = 5 × 4 × 3 × 2 × 1 = 120.
-// Entrada: A entrada é composta por uma única linha que contém o inteiro N.
-// Saída: A saída deve consistir de apenas uma linha contendo o valor de N!
-// Restrições: 0 = N = 12
-
 #include <stdio.h>
+#include <locale.h> //Necessário para usar o setlocale, função que garante que palavras sejam acentuadas.
 
-int fatorial() {	
-	if ()
-	s
+int fatorial(int N) {	
+	int FAT;
+	if ((N==0) || (N==1)) {
+		return N=1;
+	} 
+	else {
+		return FAT = N * fatorial(N-1); //Função recursiva sendo chamada 
+	}
 }
 
 int main () {
-		
-	
-	
+	setlocale(LC_ALL, "Portuguese"); //Alterando para o português
+	int N;
+	printf("Insira um número: ");
+	scanf("%d",&N);
+	printf("%d!= %d", N,fatorial(N)); //Passagem de parâmetros logo dentro do printf
 }
