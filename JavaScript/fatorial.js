@@ -1,7 +1,3 @@
-﻿
-
-```js
-
 function FirstFactorial(num) {
    if (num==1) {
         num = 1;
@@ -12,4 +8,3 @@ function FirstFactorial(num) {
   return num;      
 }
 
-```
