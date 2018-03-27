@@ -4,7 +4,7 @@ using namespace std;
 
 int v[10], n;
 
-void inserir (int v[], int valor, int &n, int tamanho) { // função para inserção
+void inserir (int v[], int valor, int &n, int tamanho) { // funÃ§Ã£o para inserÃ§Ã£o
 	if (tamanho == n) {
 		cout << "Lista cheia";
 	}
@@ -14,25 +14,26 @@ void inserir (int v[], int valor, int &n, int tamanho) { // função para inserção
 	}
 }
 
-void exibir (int v[], int n) { // função para percorrer a lista
+void exibir (int v[], int n) { // funÃ§Ã£o para percorrer a lista
 	if (n==0) {
 		cout << "Lista vazia";
 	}
 	else {
 		for (int i=0; i<n; i++) {
+			cout << "Lista: ";
 			cout << v[i] << endl;
 		}
 	}
 }
 
-int buscar (int v[], int valor, int n) { // função para buscar na lista
+int buscar (int v[], int valor, int n) { // funÃ§Ã£o para buscar na lista
 	if (n==0) {
 		cout << "Lista vazia";
 	}
 	else {
 		for (int i=0; i<n; i++) {
 			if (v[i] == valor)
-			return i; // retorna o índice do dado
+			return i; // retorna o Ã­ndice do dado
 		}
 	}
 	return -1;
@@ -40,11 +41,11 @@ int buscar (int v[], int valor, int n) { // função para buscar na lista
 
 void remover (int v[], int valor, int &n) {
 	if (n==0) { 
-		cout << "Lista vazia" << endl; return; 
+		cout << "Lista vazia" << endl;  
 	}
 	int posicao = buscar (v,valor,n);
 	if (posicao == -1) {
-		cout << "Valor não encontrado" << endl; return;
+		cout << "Valor nÃ£o encontrado" << endl;
 	}
 	v[posicao] = v[n-1];
 	n--;
@@ -54,7 +55,7 @@ main () {
 	setlocale(LC_ALL, "Portuguese");
 	int valor, posicao;
 	
-	cout << "Valor para inserção: ";
+	cout << "Valor para inserÃ§Ã£o: ";
 	cin >> valor;
 	inserir (v,valor,n,40);
 	
@@ -64,10 +65,10 @@ main () {
 	cin >> valor;
 	posicao = buscar (v,valor,n);
 	if (posicao >= 0) {
-		cout << "Posição = " << posicao << endl;
+		cout << "PosiÃ§Ã£o = " << posicao << endl;
 	}
 	else {
-		cout << "Elemento não encontrado" << endl;
+		cout << "Elemento nÃ£o encontrado" << endl;
 	}
 	
 	cout << "Valor a ser removido: ";
@@ -76,6 +77,3 @@ main () {
 	
 	exibir (v,n);
 }
-
-
-
