@@ -4,7 +4,7 @@ using namespace std;
 
 int v[10], n;
 
-void inserir (int v[], int valor, int &n, int tamanho) { // função para inserção
+void inserir (int v[], int valor, int &n, int tamanho) { // funÃ§Ã£o para inserÃ§Ã£o
 	if (tamanho == n) {
 		cout << ".................." << endl;
 		cout << "Lista cheia" << endl;
@@ -16,7 +16,7 @@ void inserir (int v[], int valor, int &n, int tamanho) { // função para inserção
 	}
 }
 
-void exibir (int v[], int n) { // função para percorrer a lista
+void exibir (int v[], int n) { // funÃ§Ã£o para percorrer a lista
 	if (n==0) {
 		cout << ".................." << endl;
 		cout << "Lista vazia" << endl;
@@ -26,13 +26,18 @@ void exibir (int v[], int n) { // função para percorrer a lista
 		cout << ".................." << endl;
 		cout << "Lista: ";
 		for (int i=0; i<n; i++) {
+<<<<<<< HEAD
 			cout  << " " << v[i] << " ";
+=======
+			cout << "Lista: ";
+			cout << v[i] << endl;
+>>>>>>> 74ce4c8c72f9586b5a1cb88323d05c95d0e1df48
 		}
 		cout << endl << ".................." << endl;
 	}
 }	
 
-int buscar (int v[], int valor, int n) { // função para buscar na lista
+int buscar (int v[], int valor, int n) { // funÃ§Ã£o para buscar na lista
 	if (n==0) {
 		cout << ".................." << endl;
 		cout << "Lista vazia" << endl;
@@ -42,7 +47,7 @@ int buscar (int v[], int valor, int n) { // função para buscar na lista
 		cout << ".................." << endl;
 		for (int i=0; i<n; i++) {
 			if (v[i] == valor)
-			return i; // retorna o índice do dado
+			return i; // retorna o Ã­ndice do dado
 		}
 		cout << ".................." << endl; 
 	}
@@ -51,6 +56,7 @@ int buscar (int v[], int valor, int n) { // função para buscar na lista
 
 void remover (int v[], int valor, int &n) {
 	if (n==0) { 
+<<<<<<< HEAD
 		cout << ".................." << endl;
 		cout << "Lista vazia" << endl; 
 		cout << ".................." << endl;
@@ -62,6 +68,13 @@ void remover (int v[], int valor, int &n) {
 		cout << "Valor não encontrado" << endl; 
 		cout << ".................." << endl;
 		return;
+=======
+		cout << "Lista vazia" << endl;  
+	}
+	int posicao = buscar (v,valor,n);
+	if (posicao == -1) {
+		cout << "Valor nÃ£o encontrado" << endl;
+>>>>>>> 74ce4c8c72f9586b5a1cb88323d05c95d0e1df48
 	}
 	v[posicao] = v[n-1];
 	n--;
@@ -73,6 +86,12 @@ main () {
 	int valor, posicao;
 	char op;
 	
+<<<<<<< HEAD
+=======
+	cout << "Valor para inserÃ§Ã£o: ";
+	cin >> valor;
+	inserir (v,valor,n,40);
+>>>>>>> 74ce4c8c72f9586b5a1cb88323d05c95d0e1df48
 	
 	do {
 	cout << "::::::::ESCOLHA UMA OPÇÃO:::::::" << endl; 	
@@ -134,8 +153,23 @@ main () {
 	}	
 	} while (op!= '0');
 	
+<<<<<<< HEAD
+=======
+	cout << "Valor para busca: ";
+	cin >> valor;
+	posicao = buscar (v,valor,n);
+	if (posicao >= 0) {
+		cout << "PosiÃ§Ã£o = " << posicao << endl;
+	}
+	else {
+		cout << "Elemento nÃ£o encontrado" << endl;
+	}
+>>>>>>> 74ce4c8c72f9586b5a1cb88323d05c95d0e1df48
 	
 	
 }
+<<<<<<< HEAD
 
 	
+=======
+>>>>>>> 74ce4c8c72f9586b5a1cb88323d05c95d0e1df48
